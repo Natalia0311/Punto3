@@ -1,0 +1,27 @@
+#ifndef TERMINO_H
+#define TERMINO_H
+
+#include "Termino.cpp"
+#include <iostream>
+#include <string>
+#include <sstream>
+
+using namespace std;
+class Term{
+    private:
+       float _coef;
+       int _pot;
+       char _var;
+    public:
+       Term(int pot,float cons,char var);
+       Term(string& db);
+       string getstr(Term& da);
+       float getC(){return _coef;}
+       int getP(){return _pot;}
+       char getV(){return _var;}
+       void setC(float& cons){_coef = cons;}
+       void setCP(float& cons, int& pot){_coef = cons; _pot = pot;}
+       void setV(char& var){_var=var;}
+};
+
+#endif //_TERMINO_H
